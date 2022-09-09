@@ -242,7 +242,7 @@ import javax.swing.SwingConstants;
 					String resposta;
 					valor2 = Double.parseDouble(display.getText());
 					
-					if (operacao == "" || valor1 == Double.parseDouble("0")) {
+					if (operacao == "") {
 						display.setText("0");
 					}else
 					
