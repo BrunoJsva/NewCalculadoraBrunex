@@ -58,7 +58,7 @@ import javax.swing.SwingConstants;
 			display = new JTextField();
 			display.setHorizontalAlignment(SwingConstants.RIGHT);
 			display.setFont(new Font("Fira Code SemiBold", Font.PLAIN, 50));
-			display.setText("");
+			display.setText("0");
 			display.setBounds(28, 31, 314, 83);
 			frmCalculadoraBrunosilva.getContentPane().add(display);
 			display.setColumns(10);
@@ -241,7 +241,11 @@ import javax.swing.SwingConstants;
 				public void actionPerformed(ActionEvent e) {
 					String resposta;
 					valor2 = Double.parseDouble(display.getText());
-
+					
+					if (operacao == "" || valor1 == Double.parseDouble("0")) {
+						display.setText("0");
+					}else
+					
 					if (operacao == "+") {
 						resultado = valor1 + valor2;
 						resposta = String.format("%.2f", resultado);
